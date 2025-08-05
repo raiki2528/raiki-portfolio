@@ -273,6 +273,36 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(animateOnScroll, 100);
 });
 
+// Toggle experience details functionality
+function toggleExperienceDetails(button) {
+    const experienceItem = button.closest('.experience-item');
+    const details = experienceItem.querySelector('.experience-details');
+    
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.textContent = '詳細を閉じる';
+        button.classList.add('expanded');
+        
+        // Smooth reveal animation
+        details.style.opacity = '0';
+        details.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            details.style.opacity = '1';
+            details.style.transform = 'translateY(0)';
+        }, 10);
+    } else {
+        details.style.opacity = '0';
+        details.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            details.style.display = 'none';
+            button.textContent = '詳細を見る';
+            button.classList.remove('expanded');
+        }, 300);
+    }
+}
+
 // Add keyboard navigation support
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
