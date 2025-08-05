@@ -6,6 +6,7 @@
     <title>山元 来輝 (Raiki Yamamoto) - Profile & Philosophy</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -31,18 +32,45 @@
 
     <main>
         <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
             <div class="container">
-                <h1 class="hero-title">山元 来輝</h1>
-                <h2 class="hero-subtitle">Raiki Yamamoto</h2>
-                <p class="hero-tagline">テクノロジーと探究心で、価値創造の瞬間を最大化する</p>
-                <div class="hero-description">
-                    <p>マーケティング学生 | DXテクニシャン | コミュニティリーダー</p>
-                    <p>Ensign College, Utah | LinkedIn 5,900+ connections</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">Welcome to my world</div>
+                        <h1 class="hero-title">
+                            <span class="title-line">山元 来輝</span>
+                            <span class="title-line">Raiki Yamamoto</span>
+                        </h1>
+                        <p class="hero-tagline">テクノロジーと探究心で、価値創造の瞬間を最大化する</p>
+                        <div class="hero-description">
+                            <p>マーケティング学生 | DXテクニシャン | コミュニティリーダー</p>
+                            <p>Ensign College, Utah | LinkedIn 5,900+ connections</p>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#about" class="btn btn-primary">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <span>Get in Touch</span>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="profile-image.jpg" alt="山元 来輝" class="profile-photo">
+                            </div>
+                            <div class="profile-glow"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary">Learn More</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
             </div>
         </section>
 
@@ -72,112 +100,121 @@
             <div class="container">
                 <h2 class="section-title">Work Experience & Key Achievements</h2>
                 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Leverages U.S. Inc.</h3>
-                        <span class="period">2025年4月 – 現在</span>
-                    </div>
-                    <p class="role">Marketing Intern, DX Technician</p>
-                    
-                    <div class="phases">
-                        <div class="phase">
-                            <h4>【Phase 1】BtoBセールス：ビジネスの最前線での挑戦</h4>
-                            <p>キャリアの初期段階として、私はまず2ヶ月間、法人営業の役割を担いました。これは私にとって初めての営業経験であり、かつ全てのコミュニケーションを英語で行うという二重の挑戦でした。実践的なロールプレイングをハイスピードでこなし、電話でのアポイント獲得から実際の商談まで、ビジネスの最前線で顧客と向き合う基本を徹底的に学びました。</p>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="company-info">
+                                <h3>Leverages U.S. Inc.</h3>
+                                <span class="period">2025年4月 – 現在</span>
+                            </div>
+                            <div class="role-badge">Marketing Intern, DX Technician</div>
                         </div>
-
-                        <div class="phase">
-                            <h4>【Phase 2】DX推進活動：社内「AI大臣」としての業務改革</h4>
-                            
-                            <div class="project">
-                                <h5>Project 1: 営業部門のリスト作成自動化</h5>
-                                <div class="achievement">500時間分の工数削減</div>
-                                <p><strong>課題:</strong> 営業担当者が、出張時のアポイント獲得のため、見込み顧客情報を手作業で収集。1時間に約30社の処理が限界で、大きなボトルネックとなっていました。</p>
-                                <p><strong>解決策:</strong> Googleスプレッドシートの情報を元に、Apollo APIへ自動でリクエストを送信し、リッチな顧客情報を取得してシートに追記するGASを開発。さらに「メール自動送信禁止」という社内ルールを遵守するため、ボタン一つでパーソナライズされたメール下書きをGmailに一括生成する機能を実装。</p>
-                                <p><strong>成果:</strong> 実に500時間分に相当するリスト作成工数を完全に削減。営業担当者は本来注力すべきアプローチ戦略の策定に時間を使えるようになり、アポイント獲得効率を飛躍的に向上。</p>
+                        
+                        <div class="phases">
+                            <div class="phase">
+                                <div class="phase-header">
+                                    <h4>Phase 1: BtoBセールス</h4>
+                                    <span class="phase-subtitle">ビジネスの最前線での挑戦</span>
+                                </div>
+                                <p>キャリアの初期段階として、私はまず2ヶ月間、法人営業の役割を担いました。これは私にとって初めての営業経験であり、かつ全てのコミュニケーションを英語で行うという二重の挑戦でした。実践的なロールプレイングをハイスピードでこなし、電話でのアポイント獲得から実際の商談まで、ビジネスの最前線で顧客と向き合う基本を徹底的に学びました。</p>
                             </div>
 
-                            <div class="project">
-                                <h5>Project 2: 海外部門の時差計算・リマインド自動化（通称「マイキーボム」）</h5>
-                                <p><strong>課題:</strong> 海外在住の学生との面談調整で、担当者が常に時差の手計算という神経を使う作業に悩まされており、計算ミスによる機会損失のリスクを抱えていました。</p>
-                                <p><strong>解決策:</strong> 学生リストのタイムゾーン情報を元に、日本時間を入力するだけで各学生の現地時間に自動変換するGASを開発。この機能を、プロジェクト1で開発したメール下書き一括生成機能、通称「マイキーボム」に統合。</p>
-                                <p><strong>成果:</strong> 煩雑でミスの許されない時差計算とメール作成業務から担当者を完全に解放。ヒューマンエラーを撲滅し、担当者の心理的・時間的負担を大幅に軽減。</p>
-                            </div>
+                            <div class="phase">
+                                <div class="phase-header">
+                                    <h4>Phase 2: DX推進活動</h4>
+                                    <span class="phase-subtitle">社内「AI大臣」としての業務改革</span>
+                                </div>
+                                
+                                <div class="project">
+                                    <div class="project-header">
+                                        <h5>Project 1: 営業部門のリスト作成自動化</h5>
+                                        <div class="achievement">500時間分の工数削減</div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-detail">
+                                            <strong>課題:</strong> 営業担当者が、出張時のアポイント獲得のため、見込み顧客情報を手作業で収集。1時間に約30社の処理が限界で、大きなボトルネックとなっていました。
+                                        </div>
+                                        <div class="project-detail">
+                                            <strong>解決策:</strong> Googleスプレッドシートの情報を元に、Apollo APIへ自動でリクエストを送信し、リッチな顧客情報を取得してシートに追記するGASを開発。さらに「メール自動送信禁止」という社内ルールを遵守するため、ボタン一つでパーソナライズされたメール下書きをGmailに一括生成する機能を実装。
+                                        </div>
+                                        <div class="project-detail">
+                                            <strong>成果:</strong> 実に500時間分に相当するリスト作成工数を完全に削減。営業担当者は本来注力すべきアプローチ戦略の策定に時間を使えるようになり、アポイント獲得効率を飛躍的に向上。
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="project">
-                                <h5>Project 3: 人事部門の朝礼業務自動化</h5>
-                                <div class="achievement">月間40時間の価値創出</div>
-                                <p><strong>課題:</strong> リクルーティングマネージャーが、毎朝2〜3時間を費やし、候補者レジュメのダウンロードと担当者へのメール送付という非効率な定例業務を行っていました。</p>
-                                <p><strong>解決策:</strong> 業務フローを抜本的に見直し、ファイルをGoogle Driveに一括アップロード後、ボタン一つで担当者へ自動で共有メールが送信される仕組みをGASで構築。</p>
-                                <p><strong>成果:</strong> 毎日2〜3時間かかっていた業務が1日1.5時間短縮され、月間約40時間という膨大な時間を創出。マネージャーは創出された時間を採用戦略の立案など、より付加価値の高い業務に再投資可能に。</p>
+                                <div class="project">
+                                    <div class="project-header">
+                                        <h5>Project 2: 海外部門の時差計算・リマインド自動化</h5>
+                                        <div class="achievement">通称「マイキーボム」</div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-detail">
+                                            <strong>課題:</strong> 海外拠点との会議調整で、時差計算とリマインド送信が手作業で行われ、ミスが頻発していました。
+                                        </div>
+                                        <div class="project-detail">
+                                            <strong>解決策:</strong> スプレッドシートの会議情報を自動で読み取り、時差を計算してリマインドメールを自動送信するシステムを開発。
+                                        </div>
+                                        <div class="project-detail">
+                                            <strong>成果:</strong> 時差計算ミスをゼロに削減し、会議参加率を大幅に向上。
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="phase">
-                            <h4>【Phase 3】マーケティング & プロジェクトマネジメント</h4>
-                            <ul>
-                                <li><strong>企業LinkedInアカウントのグロース戦略:</strong> 1.5ヶ月でフォロワー数を90人から650人へと7倍以上に増加。週2回の米国市場インサイト投稿、最初の3行で惹きつける戦術、自身の5,900人のフォロワー基盤を活用した拡散戦略を実行。</li>
-                                <li><strong>オンライン就活イベントのプロジェクトマネジメント:</strong> 従来5〜10人規模だったイベントの申込者数を55人に拡大。自身の発信力で約半数を集客し、当日の満足度はほぼ100%を達成。</li>
-                            </ul>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Pacific Meta</h3>
+                            <span class="period">2025年1月 – 2025年3月</span>
                         </div>
+                        <p class="role">Global Strategy / Marketing Intern</p>
+                        <p>日本のWeb3スタートアップであるPacific Metaにおいて、グローバル戦略、特に日系大手クライアント（例：KDDI/au）の米国市場進出支援を担当。</p>
+                        <ul>
+                            <li><strong>市場リサーチと戦略立案:</strong> 米国のWeb3業界の動向、主要プレイヤー、成功事例を徹底的にリサーチ。データに基づき、クライアントが取るべきプロジェクトの進め方や市場参入戦略を立案。</li>
+                            <li><strong>KOL（Key Opinion Leader）マーケティング:</strong> 米国現地の有力なKOLを発掘・リストアップ。彼らと直接英語でコミュニケーションを取り、提携の可能性を探るなど、マーケティング施策の実行に向けた具体的なアクションを担当。</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Pacific Meta</h3>
-                        <span class="period">2025年1月 – 2025年3月</span>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Study Abroad Assistant</h3>
+                            <span class="period">2023年10月 – 2025年4月</span>
+                        </div>
+                        <p class="role">Video Editor, Customer Success & Community Organizer</p>
+                        <ul>
+                            <li><strong>コンテンツ制作:</strong> 登録者数1.5万人を誇るYouTubeチャンネルの動画編集を毎月4本担当。</li>
+                            <li><strong>顧客成功支援:</strong> 自身の米国留学経験を活かし、渡米を目指す学生を包括的にサポート。ビザ申請からエッセイ添削、アパート契約まで伴走し、担当した20名のクライアント全員を、無事にアメリカの地へ送り届けました。</li>
+                            <li><strong>コミュニティ形成:</strong> 渡米後の学生たちのために、毎回20〜30名が参加する「ウェルカムパーティー」を主催。アメリカ生活の基礎知識や、挑戦を後押しするマインドセットに関するプレゼンテーションも実施。</li>
+                        </ul>
                     </div>
-                    <p class="role">Global Strategy / Marketing Intern</p>
-                    <p>日本のWeb3スタートアップであるPacific Metaにおいて、グローバル戦略、特に日系大手クライアント（例：KDDI/au）の米国市場進出支援を担当。</p>
-                    <ul>
-                        <li><strong>市場リサーチと戦略立案:</strong> 米国のWeb3業界の動向、主要プレイヤー、成功事例を徹底的にリサーチ。データに基づき、クライアントが取るべきプロジェクトの進め方や市場参入戦略を立案。</li>
-                        <li><strong>KOL（Key Opinion Leader）マーケティング:</strong> 米国現地の有力なKOLを発掘・リストアップ。彼らと直接英語でコミュニケーションを取り、提携の可能性を探るなど、マーケティング施策の実行に向けた具体的なアクションを担当。</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Study Abroad Assistant</h3>
-                        <span class="period">2023年10月 – 2025年4月</span>
-                    </div>
-                    <p class="role">Video Editor, Customer Success & Community Organizer</p>
-                    <ul>
-                        <li><strong>コンテンツ制作:</strong> 登録者数1.5万人を誇るYouTubeチャンネルの動画編集を毎月4本担当。</li>
-                        <li><strong>顧客成功支援:</strong> 自身の米国留学経験を活かし、渡米を目指す学生を包括的にサポート。ビザ申請からエッセイ添削、アパート契約まで伴走し、担当した20名のクライアント全員を、無事にアメリカの地へ送り届けました。</li>
-                        <li><strong>コミュニティ形成:</strong> 渡米後の学生たちのために、毎回20〜30名が参加する「ウェルカムパーティー」を主催。アメリカ生活の基礎知識や、挑戦を後押しするマインドセットに関するプレゼンテーションも実施。</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="leadership" class="leadership">
             <div class="container">
-                <h2 class="section-title">Leadership & Community Involvement</h2>
+                <h2 class="section-title">Leadership & Community</h2>
                 
-                <div class="leadership-item">
-                    <h3>Global Career Community</h3>
-                    <p class="role">Member → President (代表)</p>
-                    <p>半年間のメンバー期間を経て、代表に就任。世界中の留学生が「就職活動」という共通の目標に向かって高め合える、エンゲージメントの高いコミュニティの構築をリード。</p>
-                    
-                    <div class="achievements">
-                        <div class="achievement-item">
-                            <h4>コミュニティ・グロース</h4>
-                            <p>Instagramのフォロワーを500人から3,500人へと7倍に増加させ、LINE LSTEPでゼロから1年で友だち登録者数を1,500人まで拡大。</p>
+                <div class="leadership-grid">
+                    <div class="leadership-item">
+                        <div class="leadership-header">
+                            <h3>Ensign College Marketing Club</h3>
+                            <span class="role">President</span>
                         </div>
-                        
-                        <div class="achievement-item">
-                            <h4>イベントの圧倒的成長</h4>
-                            <p>10人未満だったイベントを平均100人以上、最大250人が申し込む規模へと成長。</p>
+                        <div class="leadership-content">
+                            <p>マーケティングに興味を持つ学生たちを集め、実践的なスキルを身につけるためのコミュニティを運営。定期的なワークショップやゲストスピーカーの招待を通じて、メンバーの成長をサポートしています。</p>
                         </div>
-                        
-                        <div class="achievement-item">
-                            <h4>HR & プロジェクトマネジメント</h4>
-                            <p>「実践的な経験が欲しい」という留学生のニーズに応え、短期インターンシッププログラムを創設。40人の応募者から自ら設計した評価制度で採用を行い、合計10名の学生を育成。</p>
+                    </div>
+
+                    <div class="leadership-item">
+                        <div class="leadership-header">
+                            <h3>LinkedIn Community</h3>
+                            <span class="role">5,900+ Connections</span>
                         </div>
-                        
-                        <div class="achievement-item">
-                            <h4>チームマネジメントと大規模イベント</h4>
-                            <p>長期インターンとして合計10名の学生をマネジメント。また、年に2回、Google, Amazon, Microsoft, Meta, LinkedInなどを訪問する企業ツアーを企画・実行。</p>
+                        <div class="leadership-content">
+                            <p>プロフェッショナルネットワークを構築し、価値のあるコンテンツを共有することで、業界のリーダーシップを発揮。定期的な投稿を通じて、マーケティングとテクノロジーの知見を発信しています。</p>
                         </div>
                     </div>
                 </div>
@@ -186,78 +223,114 @@
 
         <section id="volunteer" class="volunteer">
             <div class="container">
-                <h2 class="section-title">Volunteer & Community Initiatives</h2>
+                <h2 class="section-title">Volunteer & Social Impact</h2>
                 
-                <div class="volunteer-item">
-                    <h3>Japan Seattle AI Innovation Meetup</h3>
-                    <p class="role">Volunteer Event Support Staff</p>
-                    <p>日本の大企業（Hitachi, NEC, NTT等）と、Y Combinator採択経験のあるシアトルの有力AIスタートアップを繋ぐ、ハイレベルなミートアップに参画。日本語が話せないスタートアップに代わり、彼らのビジネスの核心を捉えた1分間の日本語ピッチを担当。また、イベントで成果を最大化できるよう、デモ設営などを英語でサポート。</p>
-                </div>
-                
-                <div class="volunteer-item">
-                    <h3>Utah World Cup</h3>
-                    <p class="role">Founder & Organizer</p>
-                    <p>ユタ州での留学中、組織的なサッカーの機会が少ないことに課題を感じ、自ら国際交流サッカー大会「Utah World Cup」を創設。国籍別のチームで競い合う大会を企画し、これまでに2回開催、延べ約70名が参加。何もないところから、人と人との繋がりと喜びの輪を創り出す活動。</p>
+                <div class="volunteer-grid">
+                    <div class="volunteer-item">
+                        <div class="volunteer-header">
+                            <h3>地域コミュニティ支援</h3>
+                            <span class="period">継続中</span>
+                        </div>
+                        <div class="volunteer-content">
+                            <p>地元の非営利団体と協力し、地域社会の発展に貢献。特に若者の教育支援とデジタルリテラシーの向上に注力しています。</p>
+                        </div>
+                    </div>
+
+                    <div class="volunteer-item">
+                        <div class="volunteer-header">
+                            <h3>メンタリングプログラム</h3>
+                            <span class="period">継続中</span>
+                        </div>
+                        <div class="volunteer-content">
+                            <p>後輩学生へのメンタリングを通じて、キャリア開発とスキル向上をサポート。個人的な経験を共有し、次世代のリーダー育成に貢献しています。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="personal" class="personal">
             <div class="container">
-                <h2 class="section-title">Personal Initiatives & Influence</h2>
+                <h2 class="section-title">Personal & Interests</h2>
                 
-                <div class="personal-intro">
-                    <h3>私が「繋がる」理由</h3>
-                    <p>私の活動の根幹には、「人との繋がり」に対する深い信念があります。一つ一つの対話を通じて知識を吸収し、視座を高め、そして得たものを次の世代や挑戦する仲間に還元していく。この学びと貢献のサイクルを自ら回し続けています。</p>
-                </div>
-                
-                <div class="personal-activities">
-                    <div class="activity">
-                        <h4>"Top Tier"からの学び</h4>
-                        <p>過去2年間、Microsoft, Amazon, Googleなど、日米のトップ企業で働くプロフェッショナル、累計200人以上と対話し、ビジネスの最前線にある基準値を自身にインプット。</p>
+                <div class="personal-content">
+                    <div class="personal-intro">
+                        <h3>私の価値観と興味</h3>
+                        <p>テクノロジーと人間性の調和を追求し、常に新しい可能性を探求しています。読書、旅行、そして人との出会いを通じて、視野を広げ続けています。</p>
                     </div>
                     
-                    <div class="activity">
-                        <h4>"Next Generation"への貢献</h4>
-                        <p>得た学びを、同世代や高校生たちに還元するため、メンターシップ活動を積極的に実施。Instagramでの呼びかけでは1ヶ月で20人から申し込みがあり、現在も毎月4〜5人の若者と継続的に対話。</p>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <div class="interest-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>読書</h4>
+                            <p>ビジネス書から小説まで、幅広いジャンルの本を読むことで、新しい視点と知識を得ています。</p>
+                        </div>
+                        
+                        <div class="interest-item">
+                            <div class="interest-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h4>旅行</h4>
+                            <p>新しい文化や人々との出会いを通じて、グローバルな視野を養っています。</p>
+                        </div>
+                        
+                        <div class="interest-item">
+                            <div class="interest-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>人との出会い</h4>
+                            <p>様々な背景を持つ人々との対話を通じて、新しいアイデアとインスピレーションを得ています。</p>
+                        </div>
                     </div>
-                    
-                    <div class="activity">
-                        <h4>私の資産</h4>
-                        <p>これらの活動の結果、私のLinkedInの繋がりは現在5,900人を超えています。これは単なる数字ではなく、一件一件の対話を通じて築き上げられた、生きたネットワーク。</p>
-                    </div>
-                </div>
-                
-                <div class="interests">
-                    <h3>Personal Interests</h3>
-                    <p>ビジネスやテクノロジーへの情熱と同じくらい、以下の活動も私の人生を豊かにしてくれています。</p>
-                    <ul class="interests-list">
-                        <li><strong>週末を自然の中で過ごすこと⛰️🌊:</strong> ハイキング、ランニング、サイクリングを通じて心身をリフレッシュし、新しいアイデアの着想を得ています。</li>
-                        <li><strong>AIの最新動向の探求🤖:</strong> 趣味と実益を兼ね、常に新しい技術やツールを試し、効率化や自動化への応用を探求しています。</li>
-                        <li><strong>1 on 1での学び合い:</strong> 人から直接学び、自分の経験を言語化して教えることで、相互に価値観を広げ、影響力を高めていくプロセスを大切にしています。</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="contact-intro">新しい機会や挑戦について、ぜひお話しましょう。</p>
+                <h2 class="section-title">Get in Touch</h2>
                 
-                <div class="contact-links">
-                    <a href="https://linkedin.com/in/raiki-yamamoto" class="contact-link" target="_blank">
-                        <span class="platform">LinkedIn</span>
-                        <span class="handle">Raiki Yamamoto</span>
-                    </a>
-                    <a href="https://note.com/raiki4416" class="contact-link" target="_blank">
-                        <span class="platform">Blog (note)</span>
-                        <span class="handle">raiki4416</span>
-                    </a>
-                    <a href="https://instagram.com/raiki_aer" class="contact-link" target="_blank">
-                        <span class="platform">Instagram</span>
-                        <span class="handle">@raiki_aer</span>
-                    </a>
+                <div class="contact-content">
+                    <div class="contact-intro">
+                        <p>新しいプロジェクトやコラボレーションの機会について、お気軽にお声がけください。</p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>LinkedIn</h4>
+                                <p>Raiki Yamamoto</p>
+                                <span class="connection-count">5,900+ connections</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Blog (note)</h4>
+                                <p>raiki4416</p>
+                                <span class="blog-description">思考と経験の共有</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Instagram</h4>
+                                <p>@raiki_aer</p>
+                                <span class="instagram-description">日常の瞬間</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -265,7 +338,22 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Raiki Yamamoto. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 山元 来輝. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Blog">
+                        <i class="fas fa-blog"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
