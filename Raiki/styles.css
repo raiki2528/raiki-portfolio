@@ -126,6 +126,43 @@ body {
     color: var(--accent-color);
 }
 
+/* 言語切り替えボタン */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    min-width: 80px;
+}
+
+.lang-btn:hover {
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.lang-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.lang-text {
+    display: inline-block;
+    transition: var(--transition-fast);
+}
+
 /* ===== ヒーローセクション ===== */
 .hero {
     min-height: 100vh;
@@ -411,6 +448,16 @@ body {
     
     .nav-menu {
         display: none;
+    }
+    
+    .language-toggle {
+        margin-left: 0.5rem;
+    }
+    
+    .lang-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        min-width: 70px;
     }
 }
 
