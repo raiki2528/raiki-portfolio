@@ -2,6 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZQZ6RJRGY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QZQZ6RJRGY');
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>山元 来輝 (Raiki Yamamoto) - Profile & Philosophy</title>
     <link rel="stylesheet" href="styles.css">
@@ -22,6 +31,11 @@
                 <li><a href="#personal">Personal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="language-toggle">
+                <button id="language-btn" class="lang-btn" onclick="toggleLanguage()">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -44,6 +58,11 @@
                             <span class="title-line">Raiki Yamamoto</span>
                         </h1>
                         <p class="hero-tagline">まだ見ぬ世界を追い求める</p>
+                        <div class="hero-socials" aria-label="Social links">
+                            <a href="https://www.instagram.com/raiki_aer/" target="_blank" aria-label="Instagram" class="hero-social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/raiki-yamamoto-047106277/" target="_blank" aria-label="LinkedIn" class="hero-social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://note.com/raiki4416" target="_blank" aria-label="Blog" class="hero-social-link"><i class="fas fa-blog"></i></a>
+                        </div>
                         <div class="hero-description">
                             <p>マーケティング学生 | DXテクニシャン |</p>
                             <p>Ensign College, Utah | LinkedIn 6,200+ connections</p>
@@ -204,7 +223,7 @@
                             <h3>Global Career Community</h3>
                             <span class="period">Member → President</span>
                         </div>
-                        <p class="role">留学生向けキャリアコミュニティ代表</p>
+                        <p class="role">留学生向けキャリアコミュニティ ex President</p>
                         <div class="experience-summary">
                             <p>Instagram 500→3500人（7倍成長）、LINE友だち0→1500人、イベント10人→250人規模へ</p>
                         </div>

@@ -1,0 +1,762 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Color Variables */
+:root {
+    --primary-orange: #FF8A65;
+    --text-primary: #000;
+    --text-secondary: #666;
+    --background-light: #fafafa;
+    --background-white: #ffffff;
+    --border-light: #e0e0e0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+/* Section Spacing */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--background-white);
+}
+
+/* 1. Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(255, 138, 101, 0.8) 0%, rgba(255, 138, 101, 0.6) 100%), 
+                url('Building.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.hero-catchphrase {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+/* 2. Problem Section */
+.problem-section {
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.problem-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.problem-visual {
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+.problem-text {
+    animation: slideInRight 1s ease-out 0.5s both;
+}
+
+.problem-visual {
+    font-size: 4rem;
+}
+
+.problem-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* 3. Vision Section */
+.vision-section {
+    text-align: center;
+}
+
+.vision-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.vision-diagram {
+    max-width: 25%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.vision-diagram:hover {
+    transform: scale(1.05);
+}
+
+.vision-highlight {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.vision-catchphrase {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out 0.5s both;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.vision-catchphrase::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-orange);
+    border-radius: 2px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+    animation: zoomIn 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.circle.current {
+    background-color: var(--text-secondary);
+    animation-delay: 0.2s;
+}
+
+.circle.ideal {
+    background-color: var(--primary-orange);
+    animation-delay: 0.4s;
+}
+
+.circle.gap {
+    background-color: var(--text-primary);
+    animation-delay: 0.6s;
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* 4. Solution Section */
+.solution-section {
+    text-align: center;
+}
+
+.solution-subtitle {
+    font-size: 1.8rem;
+    color: var(--primary-orange);
+    margin-bottom: 2rem;
+}
+
+.solution-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.plus {
+    color: var(--primary-orange);
+    font-weight: bold;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.solution-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* 5. Process Section */
+.process-section {
+    text-align: center;
+}
+
+.process-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    background: var(--background-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeInUp 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.step.optional {
+    border: 2px dashed var(--primary-orange);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-orange);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 600;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.step h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 6. Use Cases Section */
+.use-cases-section {
+    text-align: center;
+}
+
+.use-cases-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.use-case {
+    background: var(--background-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 0.6s ease-out;
+}
+
+.use-case:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.use-case-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.use-case h3 {
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.use-case p {
+    color: var(--text-secondary);
+}
+
+/* 7. Testimonials Section */
+.testimonials-section {
+    text-align: center;
+}
+
+.testimonials-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial {
+    background: var(--background-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-orange);
+    animation: slideInLeft 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateX(10px);
+}
+
+.testimonial-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* 8. Value Proposition Section */
+.value-section {
+    text-align: center;
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin-top: 3rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--background-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+th {
+    background: var(--background-light);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+th.highlight, td.highlight {
+    background: var(--primary-orange);
+    color: white;
+}
+
+td {
+    color: var(--text-secondary);
+}
+
+/* 9. Pricing Section */
+.pricing-section {
+    text-align: center;
+    background: var(--background-white);
+    color: var(--text-primary);
+}
+
+.pricing-section .section-title {
+    color: var(--text-primary);
+}
+
+.pricing-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.campaign-period {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    background: var(--primary-orange);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--border-light);
+    animation: zoomIn 0.8s ease-out;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+/* 10. Referral Section */
+.referral-section {
+    text-align: center;
+}
+
+.referral-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.referral-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.referral-visual {
+    font-size: 4rem;
+}
+
+.referral-text {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+/* 11. About Section - Video */
+.about-section {
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.intro-video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro-video:hover {
+    transform: scale(1.02);
+}
+
+.video-description {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* 12. CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, rgba(255, 138, 101, 0.8) 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-section .section-title {
+    color: white;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.qr-code {
+    font-size: 3rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background: white;
+    color: var(--primary-orange);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-catchphrase {
+        font-size: 1.2rem;
+    }
+    
+    .three-circles {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .solution-visual {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-container {
+        max-width: 100%;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .comparison-table {
+        font-size: 0.7rem;
+    }
+}
